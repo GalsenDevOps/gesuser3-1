@@ -14,20 +14,11 @@
             <version>9.1.0</version>
             <scope>provided</scope>
         </dependency>
-
         <dependency>
             <groupId>jakarta.persistence</groupId>
             <artifactId>jakarta.persistence-api</artifactId>
             <version>3.1.0</version>
         </dependency>
-
-         <dependency>
-    <groupId>jakarta.platform</groupId>
-    <artifactId>jakarta.platform-api</artifactId>
-    <version>9.1.0</version>
-    <scope>provided</scope> <!-- or another appropriate scope -->
-</dependency>
-
     </dependencies>
 
     <build>
@@ -47,6 +38,20 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.3.2</version>
             </plugin>
+
+            <!-- SonarQube Plugin -->
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.9.1.2184</version>
+            </plugin>
         </plugins>
     </build>
+
+    <properties>
+        <sonar.host.url>http://localhost:9000</sonar.host.url>
+        <sonar.projectKey>my-jakarta-ee-app</sonar.projectKey>
+        <!-- Add the SonarQube token directly or through Jenkins environment variables -->
+        <!-- <sonar.login>${env.SONAR_TOKEN}</sonar.login> -->
+    </properties>
 </project>
