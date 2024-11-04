@@ -8,12 +8,15 @@
     <packaging>war</packaging>
 
     <dependencies>
+        <!-- Jakarta EE API Dependency -->
         <dependency>
             <groupId>jakarta.platform</groupId>
-            <artifactId>jakarta.platform-api</artifactId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
             <version>9.1.0</version>
             <scope>provided</scope>
         </dependency>
+
+        <!-- Jakarta Persistence API -->
         <dependency>
             <groupId>jakarta.persistence</groupId>
             <artifactId>jakarta.persistence-api</artifactId>
@@ -51,7 +54,7 @@
     <properties>
         <sonar.host.url>http://localhost:9000</sonar.host.url>
         <sonar.projectKey>gesuser3</sonar.projectKey>
-        <!-- Add the SonarQube token directly or through Jenkins environment variables -->
+        <!-- Use SONAR_TOKEN in Jenkins environment, or set it directly if testing locally -->
         <!-- <sonar.login>${env.SONAR_TOKEN}</sonar.login> -->
     </properties>
 </project>
