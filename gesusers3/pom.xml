@@ -50,7 +50,7 @@
 
     <properties>
         <sonar.host.url>http://localhost:9000</sonar.host.url>
-        <sonar.projectKey>my-jakarta-ee-app</sonar.projectKey>
+        <sonar.projectKey>gesuser3</sonar.projectKey>
         <!-- Add the SonarQube token directly or through Jenkins environment variables -->
         <!-- <sonar.login>${env.SONAR_TOKEN}</sonar.login> -->
     </properties>
